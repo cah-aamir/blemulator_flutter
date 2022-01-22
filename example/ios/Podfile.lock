@@ -1,0 +1,40 @@
+PODS:
+  - blemulator (1.2.1):
+    - Flutter
+    - MultiplatformBleAdapter (~> 0.1.9)
+  - Flutter (1.0.0)
+  - flutter_ble_lib (2.4.0):
+    - Flutter
+    - MultiplatformBleAdapter (~> 0.1.8)
+  - MultiplatformBleAdapter (0.1.10)
+
+DEPENDENCIES:
+  - blemulator (from `.symlinks/plugins/blemulator/ios`)
+  - Flutter (from `Flutter`)
+  - flutter_ble_lib (from `.symlinks/plugins/flutter_ble_lib/ios`)
+  - MultiplatformBleAdapter (from `https://github.com/resideo/MultiplatformBleAdapter.git`)
+
+EXTERNAL SOURCES:
+  blemulator:
+    :path: ".symlinks/plugins/blemulator/ios"
+  Flutter:
+    :path: Flutter
+  flutter_ble_lib:
+    :path: ".symlinks/plugins/flutter_ble_lib/ios"
+  MultiplatformBleAdapter:
+    :git: https://github.com/resideo/MultiplatformBleAdapter.git
+
+CHECKOUT OPTIONS:
+  MultiplatformBleAdapter:
+    :commit: b96ef6ff7b6ba9be8a7a2fa3de8799368802e93b
+    :git: https://github.com/resideo/MultiplatformBleAdapter.git
+
+SPEC CHECKSUMS:
+  blemulator: 9842f038170a2b5ebc881388aeda5e4bdbee682c
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  flutter_ble_lib: 5f707dc05926b0e11824afdebc7a0bb905944b97
+  MultiplatformBleAdapter: 5839cbdd51a99c73d2123081173b8d71700247ea
+
+PODFILE CHECKSUM: 3603ca0a438349f6bbff725233fb619c00d041d3
+
+COCOAPODS: 1.11.2

@@ -220,10 +220,12 @@
     resolve([deviceContainer servicesJsonRepresentation]);
 }
 
-- (void)discoverAllServicesAndCharacteristicsForDevice:(NSString * _Nonnull)deviceIdentifier
-                                         transactionId:(NSString * _Nonnull)transactionId
-                                               resolve:(Resolve)resolve
-                                                reject:(Reject)reject {
+- (void)discoverAllServicesAndCharacteristicsForDevice:(NSString *)deviceIdentifier
+                                           serviceUuid:(NSString *)serviceUuid
+                                   characteristicUuids:(NSArray<NSString *> *)characteristicUuids
+                                         transactionId:(NSString *)transactionId
+                                               resolve:(void (^)(id _Nullable))resolve
+                                                reject:(void (^)(NSString * _Nullable, NSString * _Nullable, NSError * _Nullable))reject {
     NSLog(@"SimulatedAdapter.discoverAllServicesAndCharacteristicsForDevice");
     Resolve callbackResolve = ^(DeviceContainer *container) {
         DeviceContainer *oldContainer = [self.knownPeripherals objectForKey:container.identifier];
@@ -237,7 +239,7 @@
                 NSString *key = [NSString stringWithFormat:@"%d", characteristicContainer.characteristic.objectId];
                 [self.knownCharacteristicContainers setObject:characteristicContainer forKey:key];
             }
-
+            
         }
         resolve([[[Peripheral alloc] initWithIdentifier:container.identifier
                                                    name:container.name] jsonObjectRepresentation]);
