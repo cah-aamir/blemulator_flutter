@@ -35,5 +35,5 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.resideo:MultiPlatformBleAdapter:master-SNAPSHOT'
+    implementation 'com.github.resideo:MultiPlatformBleAdapter:feature~android-create-bond-SNAPSHOT'
 }
